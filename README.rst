@@ -50,6 +50,6 @@ Load the module as shown below::
   import kmerExtractor as kex
 
 Find a complete example and the online documentation `here <https://criccio35.github.io/kmerExtractor/>`_
-or in pdf `here <main/docs/_build/latex/kmerExtractor.pdf>`_.
+or in pdf `here <main/docs/kmerExtractor.pdf>`_.
 
 
