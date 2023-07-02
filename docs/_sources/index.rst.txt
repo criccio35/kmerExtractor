@@ -1,0 +1,27 @@
+.. kmerExtractor documentation master file, created by
+   sphinx-quickstart on Wed Jun 28 16:36:05 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+    
+Welcome to kmerExtractor's documentation!
+=========================================
+
+A genome sequence is composed of four basic types of nucleotides: adenine (A), cytosine (C), guanine (G), and thymine (T).
+All possible nucleotide substrings of length k are called **k-mers**. For example, for :math:`k=2` there are :math:`4^k=4^2=16` different 2-mers corresponding to: AA, AC, AG, AT, CA, CC, CG, CT, GA, GC, GG, GT, TA, TC, TG, TT.
+
+The kmerExtractor software calculates the k-mer frequencies for windows within the chromosomes of an organism's sequence.
+It takes as input a FASTA file with the nucleotide sequence of an organism separated by chromosomes. The software splits the chromosomes into windows of the size specified by the user. For a given :math:`k`, the kmerExtractor computes the frequency of the k-mers in the different windows within the chromosomes. It returns a csv file indicating the chromosome, the window index, the start and end position of the window, and the frequencies of the corresponding k-mers.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+   kmerExtractorTutorial
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

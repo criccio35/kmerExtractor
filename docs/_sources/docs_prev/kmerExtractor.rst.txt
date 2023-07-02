@@ -1,0 +1,7 @@
+kmerExtractor module
+====================
+
+.. automodule:: kmerExtractor
+   :members:
+   :undoc-members:
+   :show-inheritance:

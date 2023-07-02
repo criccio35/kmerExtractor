@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kmerExtractor module &mdash; kmerExtractor 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            kmerExtractor
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kmerExtractorTutorial.html">kmerExtractor user manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kmerExtractor</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">kmerExtractor module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/kmerExtractor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-kmerExtractor">
+<span id="kmerextractor-module"></span><h1>kmerExtractor module<a class="headerlink" href="#module-kmerExtractor" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.CGR">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">CGR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#CGR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.CGR" title="Permalink to this definition"></a></dt>
+<dd><p>Generate the X and Y coordinates of the Chaos Game Representation (CGR) for the input sequence.
+Purine nucleotides (A and G) are placed on the minor diagonal, and the pyrimidine nucleotides (C and T) on the main diagonal.
+The CGR is built in a square of dimensions 2d x 2d with center at the coordinates (0,0).
+Only the four basic uppercase nucleotides (A, C, G, T) are accepted. Any other character is ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<em>str</em>) – Nucleotide sequence.</p></li>
+<li><p><strong>d</strong> (<em>int</em>) – Half of the side of the square. Default to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The x and y coordinates of the CGR.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple[list[float],list[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.FCGR">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">FCGR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kmers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#FCGR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.FCGR" title="Permalink to this definition"></a></dt>
+<dd><p>Organize the k-mers and their associated values in the common structure of
+Frequency Chaos Game Representation (FCGR), i.e., a matrix of dimensions N x N,
+where N = 4^(k/2); with the upper left corner equal to the k-mer of C,
+the upper right corner the k-mer of G, the lower left corner the k-mer of A,
+and the lower right corner the k-mer of T.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kmers</strong> (<em>dict</em>) – dictionary mapping the k-mers to a real value. All k-mers must be of the same length.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FCGR matrix and the names of the k-mers in the matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple[numpy.ndarray, numpy.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.kmers_by_window">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">kmers_by_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#kmers_by_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.kmers_by_window" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the frequency of k-mers by windows within each of the chromosome sequences.
+First, the entire sequence contained within the FASTA file is read.
+The sequences of each chromosome are then identified and separated.
+Subsequently, each chromosome is separated into windows of the specified size.
+Finally, the frequencies of the k-mers are calculated for each window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Location of the FASTA file containing the nucleotide sequence of an organism separated by chromosomes.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Length of k-mers.</p></li>
+<li><p><strong>window_size</strong> (<em>int</em>) – Window size, in number of base pairs, to be used to count the frequency of k-mers within the chromosome.
+Must be less than or equal to the length of the smallest chromosome.
+Default to 100000.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – Path to the directory where the output csv file will be saved.
+If not specified, the output file will be saved in the same directory as the input file. Default to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe indicating the chromosome, the window index, the start and end positions of the window,
+and the frequencies of the corresponding k-mers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.kmers_by_window_opt">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">kmers_by_window_opt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#kmers_by_window_opt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.kmers_by_window_opt" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the frequency of k-mers by windows within each of the chromosome sequences.
+It calculates the k-mers, as it reads the FASTA file, optimizing space by avoiding storing the sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Location of the FASTA file containing the nucleotide sequence of an organism separated by chromosomes.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Length of k-mers.</p></li>
+<li><p><strong>window_size</strong> (<em>int</em>) – Window size, in number of base pairs, to be used to count the frequency of k-mers within the chromosome.
+Must be greater than the number of nucleotides per line in the input FASTA file. Default to 100000</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – Path to the directory where the output csv file will be saved.
+If not specified, the output file will be saved in the same directory as the input file. Default to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe containing the k-mer frequencies for all windows of each chromosome.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.kmers_in_sequence">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">kmers_in_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#kmers_in_sequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.kmers_in_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the frequency of k-mers in a given sequence.
+Only k-mers containing the four basic uppercase nucleotides (A, C, G, T) are accepted.
+Any substrings of length k that have any other character in their composition will be disregarded and thus not considered as k-mers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<em>str</em>) – Nucleotide sequence.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Length of k-mers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary containing the k-mer frequencies. Keys are the k-mers and values are the corresponding frequencies.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.plot_CGR">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">plot_CGR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">6)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#plot_CGR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.plot_CGR" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the Chaos Game Representation (CGR) of the input sequence.
+Purine nucleotides (A and G) are placed on the minor diagonal, and the pyrimidine nucleotides (C and T) on the main diagonal.
+The CGR is built in a square of dimensions 2d x 2d with center at the coordinates (0,0).
+Only the four basic uppercase nucleotides (A, C, G, T) are accepted. Any other character is ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<em>str</em>) – Nucleotide sequence.</p></li>
+<li><p><strong>d</strong> (<em>int</em>) – Half of the side of the square in which the CGR is built. Default to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Axes object containing the plot.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.axes._axes.Axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.plot_FCGR">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">plot_FCGR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(7,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colormap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bwr'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#plot_FCGR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.plot_FCGR" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the Frequency Chaos Game Representation (FCGR) of the k-mers in the input dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Dataframe with the k-mer frequencies by windows across chromosomes.</p></li>
+<li><p><strong>chromosome</strong> (<em>str</em>) – Name of the chromosome to plot. If None, parameter window must be None,
+plotting the sum of k-mers across all chromosomes. Default to None.</p></li>
+<li><p><strong>window</strong> (<em>int</em>) – Number of the window to plot. If None, plot the sum of all windows for each chromosome. Default to None.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) – The size in inches of the figure to create. Default to (7,6).</p></li>
+<li><p><strong>colormap</strong> (<em>str</em>) – Matplotlib colormap name. The mapping from data values to color space. Default to ‘bwr’.</p></li>
+<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes</em>) – Axes in which to draw the plot, otherwise use the currently-active Axes. Default to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Axes object containing the plot.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.axes._axes.Axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.plot_kmers_across_windows">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">plot_kmers_across_windows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kmer_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(12,</span> <span class="pre">4)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#plot_kmers_across_windows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.plot_kmers_across_windows" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the frequencies of the given k-mers across the windows of a given chromosome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – dataframe with the k-mer frequencies by window.</p></li>
+<li><p><strong>kmer_names</strong> (<em>list</em>) – list of k-mer names to plot.</p></li>
+<li><p><strong>chromosome</strong> (<em>str</em>) – name of the chromosome to plot.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) – The size in inches of the figure to create. default to (12,4).</p></li>
+<li><p><strong>ax</strong> (<em>matplotlib.axes._axes.Axes</em>) – The Axes object containing the plot. If None, a new figure and axes is created. Default to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Axes object containing the plot.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.axes._axes.Axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="kmerExtractor.plot_kmers_freq_within_chromosomes">
+<span class="sig-prename descclassname"><span class="pre">kmerExtractor.</span></span><span class="sig-name descname"><span class="pre">plot_kmers_freq_within_chromosomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(15,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/kmerExtractor.html#plot_kmers_freq_within_chromosomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#kmerExtractor.plot_kmers_freq_within_chromosomes" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the sum of the k-mer frequencies within each chromosome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – dataframe with the k-mer frequencies by window.</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>[</em><em>int</em><em>,</em><em>int</em><em>]</em>) – The size in inches of the figure to create. default to (15,6).</p></li>
+<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes</em>) – Axes in which to draw the plot, otherwise use the currently-active Axes. Default to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Axes object containing the plot.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.axes._axes.Axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Camila Riccio-Rengifo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
