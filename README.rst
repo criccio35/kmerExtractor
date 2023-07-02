@@ -8,11 +8,13 @@ This is a Python3 implementation to computes the k-mer frequencies for windows w
 
 A genome sequence is composed of four basic types of nucleotides: adenine (A), cytosine (C), guanine (G), and thymine (T).
 All possible nucleotide substrings of length  are called k-mers. The k-mer frequency can be used to unravel patterns within
-genomic sequences. Usually these frequencies are calculated to characterize complete genomes. However, this approach can
-provide a higher resolution of the genomic composition if frequencies are calculated for small windows within the sequence
-of each chromosome. Additionally, this windowed resolution allows the frequency of k-mers to be used as input for machine
-learning models that can help predict the behavior of other windowed properties within the chromosome.
-The kmerExtractor module was designed to fulfill this purpose.
+genomic sequences. Usually these frequencies are calculated to characterize complete genomes or specific regions. 
+However, k-mers can also provide a higher resolution of the genomic composition, while taking into account 
+genome-wide information. This can be achieved by calculating frequencies for small windows within the sequence of each 
+chromosome. It generates a fixed number of features () per window, regardless of the length of the sequence. 
+The latter allows the frequencies to be used as input for machine learning models that can help predict the behavior of
+other windowed properties within the chromosome.
+The kmerExtractor software was designed to fulfill this purpose.
 
 kmerExtractor takes as input a FASTA file with the nucleotide sequence of an organism separated by chromosomes.
 It splits the chromosomes into windows of the desired size (e.g., 100 kb or 1 Mb).
