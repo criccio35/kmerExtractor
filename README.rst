@@ -11,7 +11,7 @@ All possible nucleotide substrings of length  are called k-mers. The k-mer frequ
 genomic sequences. Usually these frequencies are calculated to characterize complete genomes or specific regions. 
 However, k-mers can also provide a higher resolution of the genomic composition, while taking into account 
 genome-wide information. This can be achieved by calculating frequencies for small windows within the sequence of each 
-chromosome. It generates a fixed number of features () per window, regardless of the length of the sequence. 
+chromosome. It generates a fixed number of features (:math:`4^k`) per window, regardless of the length of the sequence. 
 The latter allows the frequencies to be used as input for machine learning models that can help predict the behavior of
 other windowed properties within the chromosome.
 The kmerExtractor software was designed to fulfill this purpose.
