@@ -1,5 +1,5 @@
 * Written by Camila Riccio, Mauricio Peñuela, Camilo Rocha and Jorge Finke
-* Last update: 30/06/23 
+* Last update: 30/10/2025 
 
 kmerExtractor
 =============
