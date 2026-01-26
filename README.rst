@@ -57,15 +57,24 @@ or in pdf `here <docs/kmerextractor.pdf>`_.
 How to cite
 ------------
 @article{penuela2025unraveling,
+
   title={Unraveling Plant Recombination Patterns: Insights From Genome k-mers},
+
   author={Pe{\~n}uela, Mauricio and Riccio-Rengifo, Camila and Finke, Jorge and Rocha, Camilo},
+
   journal={Plant Direct},
+
   volume={9},
+
   number={11},
+
   pages={e70113},
+
   year={2025},
+
   publisher={Wiley Online Library}
 }
+
 https://onlinelibrary.wiley.com/doi/10.1002/pld3.70113
 
 
